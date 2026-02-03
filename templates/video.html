@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Stranica</title>
+    <style>
+        body {
+            background-color: #1a1a1a; /* Tamna pozadina */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        .video-box {
+            box-shadow: 0px 0px 20px rgba(0,255,255,0.2); /* Sjaj oko videa */
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .nazad-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Uživaj u videu!</h2>
+    <div class="video-box">
+        <iframe width="700" height="400" 
+            src="https://www.youtube.com/shorts/uyTaIezA2mU"
+            frameborder="0" allowfullscreen>
+        </iframe>
+    </div>
+    <a href="/" class="nazad-btn">Vrati se nazad</a>
+</body>
+</html>
