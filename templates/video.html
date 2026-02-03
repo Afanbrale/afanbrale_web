@@ -1,42 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Video Stranica</title>
+    <title>Afanov Video</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            background-color: #1a1a1a; /* Tamna pozadina */
+            background-color: #121212; /* Skroz tamna pozadina */
             color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
-            font-family: sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        .video-box {
-            box-shadow: 0px 0px 20px rgba(0,255,255,0.2); /* Sjaj oko videa */
-            border-radius: 10px;
+        .video-container {
+            /* Ovo je podešeno za vertikalni video (telefon format) */
+            width: 90%;
+            max-width: 315px; 
+            border: 3px solid #007bff;
+            border-radius: 15px;
+            box-shadow: 0px 0px 30px rgba(0, 123, 255, 0.5);
             overflow: hidden;
+            background: black;
         }
-        .nazad-btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #007bff;
+        iframe {
+            display: block;
+        }
+        .back-btn {
+            margin-top: 25px;
+            padding: 12px 25px;
+            background-color: #007bff;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-    <h2>Uživaj u videu!</h2>
-    <div class="video-box">
-        <iframe width="700" height="400" 
-            src="https://www.youtube.com/shorts/uyTaIezA2mU"
-            frameborder="0" allowfullscreen>
+    <h2 style="margin-bottom: 20px;">🎥 Pogledaj moj video!</h2>
+    
+    <div class="video-container">
+        <iframe width="315" height="560" 
+            src="https://www.youtube.com/embed/uyTaIezA2mU?rel=0"
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
         </iframe>
     </div>
-    <a href="/" class="nazad-btn">Vrati se nazad</a>
+
+    <a href="/" class="back-btn">⬅ Vrati se nazad</a>
 </body>
 </html>
